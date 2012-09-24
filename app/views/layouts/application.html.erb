@@ -15,14 +15,14 @@
     </div>
 <% end %>
 
-<h1><%= link_to "Ticketee", root_path %></h1>
+<h1><%= link_to "Welcome to Ticketee", root_path %></h1>
 <div id="nav">
 
   <% if user_signed_in? %>
       Signed in as <%= current_user.email %>
   <% else %>
-    <%= link_to "Sign up", new_user_registration_path %>  <br><br>
-      <%= link_to "Sign in", new_user_session_path %>
+    <%= link_to "Sign up", new_user_registration_path %>
+      <%= link_to "Sign in", new_user_session_path %>     <br> <br><br> <br>
   <% end %>
 
 </div>
