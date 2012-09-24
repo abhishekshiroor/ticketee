@@ -48,6 +48,7 @@ end
 group :production do
   gem 'pg', '0.12.2'
   gem 'thin'
+  gem 'dynamic_form'
 end
 
 group :test do
