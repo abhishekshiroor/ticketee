@@ -48,4 +48,5 @@ group :test do
   gem 'database_cleaner'
   gem 'factory_girl'
   gem 'factory_girl_rails'
+  gem 'devise', '~> 1.4.3'
 end
