@@ -7,6 +7,8 @@ gem 'rails', '3.2.7'
 
 gem 'sqlite3'
 
+gem 'devise', '~> 1.4.3'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -48,5 +50,4 @@ group :test do
   gem 'database_cleaner'
   gem 'factory_girl'
   gem 'factory_girl_rails'
-  gem 'devise', '~> 1.4.3'
 end

@@ -3,6 +3,7 @@
 <head>
   <title><%= @title||"Ticketee" %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "projects" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
@@ -15,11 +16,11 @@
 <% end %>
 
 <h1><%= link_to "Ticketee", root_path %></h1>
-<nav>
+<div id="nav">
 
-      <%= link_to "Sign up", new_user_registration_path %>
+  <%= link_to "Sign up", new_user_registration_path %>
 
-</nav>
+</div>
 
 <%= yield %>
 
