@@ -44,16 +44,18 @@ gem 'oa-core'
 # To use debugger
 # gem 'debugger'
 
+group :production do
+  gem 'pg', '0.12.2'
+  gem 'thin'
+  gem 'dynamic_form'
+end
+
 group :test, :development do
   gem 'sqlite3'
   gem 'rspec-rails', '~>2.5'
 end
 
-#group :production do
-#  gem 'pg', '0.12.2'
-#  gem 'thin'
-#  gem 'dynamic_form'
-#end
+
 
 group :test do
   gem 'cucumber-rails'
