@@ -59,7 +59,7 @@ Ticketee::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
 
   root :to => "projects#index"
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   resources :projects do
     resources :tickets
   end

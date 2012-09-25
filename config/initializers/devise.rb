@@ -1,4 +1,5 @@
 #require "devise"
+require "omniauth-facebook"
 
 # Use this hook to configure devise mailer, warden hooks and so forth. The first
 # four configuration values can also be set straight in your models.
@@ -209,4 +210,6 @@ Devise.setup do |config|
   #   manager.intercept_401 = false
   #   manager.default_strategies(:scope => :user).unshift :some_external_strategy
   # end
+
+  config.omniauth :facebook, "291979260915271", "14d9b43b9080f11c9ffc9d6ee59e6543" , :strategy_class => OmniAuth::Strategies::Facebook
 end

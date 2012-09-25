@@ -24,6 +24,10 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'omniauth'
+gem 'oauth2'
+gem 'omniauth-facebook'
+gem 'oa-core'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -45,11 +49,11 @@ group :test, :development do
   gem 'rspec-rails', '~>2.5'
 end
 
-group :production do
-  gem 'pg', '0.12.2'
-  gem 'thin'
-  gem 'dynamic_form'
-end
+#group :production do
+#  gem 'pg', '0.12.2'
+#  gem 'thin'
+#  gem 'dynamic_form'
+#end
 
 group :test do
   gem 'cucumber-rails'

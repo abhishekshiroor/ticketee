@@ -6,4 +6,8 @@ module ApplicationHelper
       end
     end
   end
+
+  def facebook?
+    session["devise.facebook_data"]
+  end
 end

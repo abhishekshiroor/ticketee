@@ -18,11 +18,16 @@
 <h1><%= link_to "Welcome to Ticketee", root_path %></h1>
 <div id="nav">
 
-  <% if user_signed_in? %>
-      Signed in as <%= current_user.email %>
+  <% if user_signed_in? and !facebook?%>
+            Signed in as <%= current_user.email %> <br><br>
+ <% elsif user_signed_in? and facebook? %>
+          Signed in with facebook account as <%= current_user.email %> <br><br>
+
   <% else %>
     <%= link_to "Sign up", new_user_registration_path %>
-      <%= link_to "Sign in", new_user_session_path %>     <br> <br><br> <br>
+      <%= link_to "Sign in", new_user_session_path %>     <br><br>
+      <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+      <br> <br>
   <% end %>
 
 </div>
