@@ -4,8 +4,11 @@ class ProjectsController < ApplicationController
                                          :update,
                                          :destroy]
 
+  respond_to :html, :xml, :json
+
   def index
      @projects = Project.all
+     respond_with(@projects = Project.all)
   end
 
   def new
